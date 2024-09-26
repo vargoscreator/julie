@@ -158,8 +158,12 @@ main.main{
     right: 0;
     z-index: 100;
     transition: all .2s ease;
+    background-color: #DBE7DC;
 }
-.header.scrolled{
+.header-animate{
+    background-color: transparent;
+}
+.header-animate.scrolled{
     background-color: #DBE7DC;
 }
 .header__delivery{
@@ -1172,7 +1176,6 @@ main.main{
       "a b"
       "c b";
 }
-  
 .footer__block-top{
     display: flex;
     flex-direction: column;
@@ -1260,7 +1263,7 @@ main.main{
     background: #DBE7DC;
     border-radius: 50%;
 }
-.footer__privacy{
+.footer__page-content{
     margin-top: 12px;
     color: #FFF;
     font-size: 16px;
@@ -1307,8 +1310,15 @@ main.main{
     .footer__block-bottom{
         margin-top: 0;
     }
+    .footer__title {
+        font-size: 33px;
+        line-height: 38px;
+    }
 }
-
+.footer-page{
+    margin-top: 0;
+    padding: 31px 0;
+}
 .breadcrumbs{
     display: flex;
     align-items: center;
@@ -1349,16 +1359,15 @@ main.main{
 .breadcrumbs__link.active{
     color: #0E3A39;
 }
-.privacy{
+.page-content{
     margin-top: 106px;
     padding: 40px 0;
     background-color: #fff;
-    margin-bottom: 40px;
 }
-.privacy h1{
+.page-content h1{
     text-align: center;
 }
-.privacy h3{
+.page-content h4{
     margin-top: 40px;
     font-family: "Ovo", serif;
     color: #0E3A39;
@@ -1368,134 +1377,34 @@ main.main{
     line-height: 38px; /* 135.714% */
     text-transform: capitalize;
 }
-.privacy p{
+.page-content p{
     margin-top: 8px;
 }
-.privacy p + p{
+.page-content p + p{
     margin-top: 16px;
 }
-.privacy p a{
+.page-content p a{
     color: #0E3A39;
-    -webkit-text-decoration-line: underline;
-    text-decoration-line: underline;
-    text-decoration: underline;
-    -webkit-text-decoration-style: underline;
-    text-decoration-style: underline;
-    text-underline-position: under;
+    font-weight: 600;
 }
-@media (max-width: 767px) {
-    .privacy{
-        padding: 24px 0;
-    }
-    .privacy h1 {
-        font-size: 20px;
-        line-height: 32px;
-    }
-    .privacy h3{
-        margin-top: 20px;
-        font-size: 16px;
-        line-height: 28px;
-    }
-    .privacy p{
-        margin-top: 4px;
-    } 
-    .privacy p + p{
-        margin-top: 8px;
-    }
-}
-/* terms */
-.terms{
-    margin-top: 106px;
-    padding: 40px 0;
-    background-color: #fff;
-    margin-bottom: 40px;
-}
-.terms h1{
-    text-align: center;
-}
-.terms__content h3{
-    margin-top: 40px;
-    font-family: "Ovo", serif;
-    color: #0E3A39;
-    font-size: 28px;
-    font-weight: 400;
-    line-height: 38px;
-    text-transform: capitalize;
-}
-.terms__content h4{
-    margin: 16px 0;
-    font-family: "Ovo", serif;
-    color: #0E3A39;
-    font-size: 22px;
-    font-weight: 400;
-    line-height: 32px;
-    text-transform: capitalize;
-}
-.terms__content p{
-    margin-top: 8px;
-}
-.terms__content p + p{
+.page-content ul{
     margin-top: 16px;
 }
-.terms__content p a{
-    color: #0E3A39;
-    -webkit-text-decoration-line: underline;
-    text-decoration-line: underline;
-    text-decoration: underline;
-    -webkit-text-decoration-style: underline;
-    text-decoration-style: underline;
-    text-underline-position: under;
-}
-.terms__content ul{
-    padding-left: 24px;
-    margin-top: 16px;
-}
-.terms__content ul li{
-    position: relative;
-}
-.terms__content ul li + li{
-    margin-top: 8px;
-}
-.terms__content ul li::before{
-    content: '';
-    position: absolute;
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
-    background-color: #686868;
-    top: 50%;
-    left: -16px;
-    transform: translateY(-50%);
-}
-.terms__content ul + p{
+.page-content > ul + p{
     margin-top: 16px;
 }
 @media (max-width: 767px) {
-    .terms{
+    .page-content{
         padding: 24px 0;
     }
-    .terms__content h1 {
-        font-size: 20px;
-        line-height: 32px;
+    .page-content h1 {
+        font-size: 40px;
+        line-height: 52px;
     }
-    .terms__content h3{
-        margin-top: 20px;
-        font-size: 16px;
-        line-height: 28px;
+    .page-content h4 {
+        margin-top: 30px;
+        font-size: 22px;
+        line-height: 34px;
     }
-    .terms__content h4 {
-        margin: 8px 0;
-    }
-    .terms__content p{
-        margin-top: 4px;
-    } 
-    .terms__content p + p{
-        margin-top: 8px;
-    }
-    .terms__content ul{
-        margin-top: 8px;
-    }
-    .terms__content ul + p {
-        margin-top: 8px;
-    }
+    
 }
